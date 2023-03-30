@@ -39,18 +39,18 @@ class FakeLayoutRepo: LayoutRepo {
                     }
 
                 },
-                ImageRowModel(
+                ImageCarouselModel(
                      list = listOf(
-                        ImageRowItem("https://placedog.net/120?random", "Item 1"),
-                        ImageRowItem("https://placedog.net/120?random", "Item 2"),
-                        ImageRowItem("https://placedog.net/120?random", "Item 3"),
-                        ImageRowItem("https://placedog.net/120?random", "Item 4"),
-                        ImageRowItem("https://placedog.net/120?random", "Item 5"),
-                        ImageRowItem("https://placedog.net/120?random", "Item 6"),
-                        ImageRowItem("https://placedog.net/120?random.", "Item 7"),
+                        ImageCarouselItem("https://placedog.net/120?random", "Item 1"),
+                        ImageCarouselItem("https://placedog.net/120?random", "Item 2"),
+                        ImageCarouselItem("https://placedog.net/120?random", "Item 3"),
+                        ImageCarouselItem("https://placedog.net/120?random", "Item 4"),
+                        ImageCarouselItem("https://placedog.net/120?random", "Item 5"),
+                        ImageCarouselItem("https://placedog.net/120?random", "Item 6"),
+                        ImageCarouselItem("https://placedog.net/120?random.", "Item 7"),
                     )
                 ).apply {
-                    widgetType=WIDGET_TYPE.IMAGE_ROW
+                    widgetType=WIDGET_TYPE.IMAGE_CAROUSEL
                 }
 
             )

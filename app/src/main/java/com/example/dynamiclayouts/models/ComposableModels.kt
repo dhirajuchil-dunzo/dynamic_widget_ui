@@ -2,7 +2,7 @@ package com.example.dynamiclayouts.models
 
 
 enum class WIDGET_TYPE {
-    GREETING, IMAGE_TEXT, IMAGE_ROW,
+    GREETING, IMAGE_TEXT, IMAGE_CAROUSEL,
 }
 
 
@@ -22,8 +22,7 @@ open class BaseWidgetModel() {
 data class ImageWithTextModel(
     var imageUrl: String? = null,
     var text: TextModel? = null
-) :
-    BaseWidgetModel()
+) : BaseWidgetModel()
 
 
 data class GreetingModel(

@@ -1,7 +1,7 @@
 package com.example.dynamiclayouts.models
 
 enum class ACTION_TYPE {
-    NAVIGATE, BOTTOM_SHEET, WEB, CUSTOM
+    NAVIGATE, BOTTOM_SHEET, OPEN_URL, CUSTOM
 }
 
 
@@ -15,3 +15,5 @@ open class BaseAction() {
 
 
 data class NavigateAction(var endpoint: String) : BaseAction()
+
+data class OpenUrl(var url:String?=null):BaseAction()

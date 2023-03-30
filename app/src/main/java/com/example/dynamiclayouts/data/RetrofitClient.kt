@@ -18,16 +18,20 @@ object RetrofitClient {
             .Builder()
             .addInterceptor(mHttpLoggingInterceptor)
             .build()
+
         val baseModelAdapterFactory: RuntimeTypeAdapterFactory<BaseWidgetModel> =
             RuntimeTypeAdapterFactory
                 .of(BaseWidgetModel::class.java, "widgetType", true)
                 .registerSubtype(GreetingModel::class.java, "GREETING")
                 .registerSubtype(ImageWithTextModel::class.java, "IMAGE_TEXT")
-                .registerSubtype(ImageRowModel::class.java, "IMAGE_ROW")
+                .registerSubtype(ImageCarouselModel::class.java, "IMAGE_CAROUSEL")
+
         val baseActionAdapterFactory: RuntimeTypeAdapterFactory<BaseAction> =
             RuntimeTypeAdapterFactory
                 .of(BaseAction::class.java, "actionType", true)
                 .registerSubtype(NavigateAction::class.java, "NAVIGATE")
+                .registerSubtype(OpenUrl::class.java, "OPEN_URL")
+                .registerSubtype(BaseAction::class.java, "CUSTOM")
 
         var gson = GsonBuilder().registerTypeAdapterFactory(baseModelAdapterFactory)
             .registerTypeAdapterFactory(baseActionAdapterFactory).create()
